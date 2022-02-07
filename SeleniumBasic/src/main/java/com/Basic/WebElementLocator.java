@@ -12,7 +12,8 @@ public class WebElementLocator extends BaseClass {
         OpenWebsite("https://www.google.com/");
 
         //Locators();
-        RelativeLocator();
+        //RelativeLocator();
+        LocateElements();
 
         SmallWait();
         FirefoxQuit();
@@ -30,7 +31,7 @@ public class WebElementLocator extends BaseClass {
 
         driver.navigate().to("https://trytestingthis.netlify.app/");
 
-        List<WebElement> options = driver.findElements(By.name("Optionwithcheck[]"));
+        List<WebElement> options = driver.findElements(By.name("Optionwithcheck[]")); //For multiple elements
         for(WebElement element : options){
             System.out.println(element.getText());
         }
@@ -43,5 +44,38 @@ public class WebElementLocator extends BaseClass {
         WebElement btn = driver.findElement(By.id("btnLogin"));
 
         driver.findElement(RelativeLocator.with(By.tagName("input")).above(btn)).sendKeys("Fahim");
+    }
+
+    public static void LocateElements(){
+        //Element from Element
+
+        /*WebElement form = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form"));
+        form.findElement(By.name("q")).sendKeys("Selenium" + Keys.ENTER);*/
+        //----------------------------------------------------------------------//
+        //Active Elements
+
+        /*driver.findElement(By.name("q")).sendKeys("Selenium" + Keys.ENTER);
+
+        String title = driver.switchTo().activeElement().getAttribute("title");
+        System.out.println(title);*/
+        //-----------------------------------------------------------------------//
+        //Get tag name, css value, text
+
+        /*WebElement searchbox = driver.findElement(By.name("q"));
+        searchbox.sendKeys("Selenium");
+
+        System.out.println(searchbox.getText());
+        System.out.println(searchbox.getCssValue("font"));
+        System.out.println(searchbox.getTagName());*/
+        //-----------------------------------------------------------------------//
+        //Find enable/disable elements
+
+        driver.navigate().to("https://the-internet.herokuapp.com/checkboxes");
+
+        List<WebElement> option = driver.findElements(By.tagName("input"));
+        for(WebElement element : option){
+            System.out.println(element.isEnabled());
+            System.out.println(element.isSelected());
+        }
     }
 }
