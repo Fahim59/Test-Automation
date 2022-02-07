@@ -4,10 +4,12 @@ import io.github.bonigarcia.wdm.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.*;
 
+import java.io.*;
+
 public class BaseClass {
     public static WebDriver driver;
 
-    public static void main(String[] args) throws InterruptedException{}
+    public static void main(String[] args) throws InterruptedException, IOException {}
 
     public static void FirefoxLaunch(){WebDriverManager.firefoxdriver().setup();driver = new FirefoxDriver();}
 
