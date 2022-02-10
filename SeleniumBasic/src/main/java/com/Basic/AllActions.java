@@ -23,7 +23,7 @@ public class AllActions extends BaseClass {
         //Slider();
         //EncodeDecode();
         //FileUpload();
-        DateTime();
+        //DateTime();
 
         SmallWait();
         FirefoxQuit();
@@ -168,6 +168,8 @@ public class AllActions extends BaseClass {
             System.out.println(option.getAttribute("value")); //printing the options
 
             if(option.getAttribute("value").equalsIgnoreCase("male")){
+                //JavascriptExecutor jse = (JavascriptExecutor)driver;
+                //jse.executeScript("arguments[0].click()", option);
                 option.click();
             }
             System.out.println(option.isSelected()); //print which one is selected
