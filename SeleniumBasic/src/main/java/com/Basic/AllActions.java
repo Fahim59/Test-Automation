@@ -19,6 +19,7 @@ public class AllActions extends BaseClass {
         //DragandDrop();
         //DropDown();
         //RadioButton();
+        Checkbox();
         //IFrame();
         //Slider();
         //EncodeDecode();
@@ -173,6 +174,23 @@ public class AllActions extends BaseClass {
                 option.click();
             }
             System.out.println(option.isSelected()); //print which one is selected
+        }
+    }
+
+    public static void Checkbox(){
+        driver.navigate().to("https://trytestingthis.netlify.app/");
+
+        List<WebElement> cbox = driver.findElements(By.xpath("//input[@type='checkbox']"));
+        System.out.println(cbox.size());
+
+        for(WebElement option : cbox){
+
+            String y = option.getAttribute("value");
+
+            if(y.equalsIgnoreCase("Option 1")){
+                option.click();
+            }
+            System.out.println(option.isSelected());
         }
     }
 

@@ -11,15 +11,16 @@ import java.util.*;
 
 public class ReadExcel extends BaseClass{
     public static void main(String[] args) throws IOException, InterruptedException {
-        FirefoxLaunch();
-        OpenWebsite("https://nxtgenaiacademy.com/demo-site/");
+        //FirefoxLaunch();
+        //OpenWebsite("https://nxtgenaiacademy.com/demo-site/");
 
-        ExcelSheet();
+        //ExcelSheetReading();
+        ExcelSheetWriting();
 
-        FirefoxQuit();
+        //FirefoxQuit();
     }
 
-    public static void ExcelSheet() throws IOException, InterruptedException {
+    public static void ExcelSheetReading() throws IOException, InterruptedException {
         DataFormatter formatter = new DataFormatter();
         FileInputStream file = new FileInputStream("F:/Testing/Registration.xlsx");
 
@@ -46,8 +47,11 @@ public class ReadExcel extends BaseClass{
                 String Phone = formatter.formatCellValue(current_row.getCell(10));
                 String Subject = current_row.getCell(11).getStringCellValue();
                 String Query = current_row.getCell(12).getStringCellValue();
-                String Text = formatter.formatCellValue(current_row.getCell(13));
+                //---------------------------------------------------------------------------------------//
+                //int Text = (int)current_row.getCell(13).getNumericCellValue(); //For integer values. 75 -> instead of 75.0
 
+                String Text = formatter.formatCellValue(current_row.getCell(13));
+                //---------------------------------------------------------------------------------------//
                 //System.out.println(First_Name +" - "+ Last_Name +" - "+ Gender +" - "+ Address +" - "+ Street +" - "+ State +" - "+  City +" - "+  Country +" - "+  Email +" - "+  Dob +" - "+  Phone +" - "+  Subject +" - "+  Query +" - "+  Text);
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
                 driver.findElement(By.id("vfb-5")).sendKeys(First_Name); //Firstname
@@ -117,6 +121,7 @@ public class ReadExcel extends BaseClass{
                 driver.findElement(By.id("vfb-23")).sendKeys(Query); //Query
                 //-----------------------------------------------------------------------------------------//
                 driver.findElement(By.id("vfb-3")).sendKeys(Text); //Text
+                //driver.findElement(By.id("vfb-3")).sendKeys(String.valueOf(Text)); //For integer values
                 //-----------------------------------------------------------------------------------------//
                 driver.findElement(By.id("vfb-4")).click(); //Button
                 //-----------------------------------------------------------------------------------------//
@@ -131,5 +136,23 @@ public class ReadExcel extends BaseClass{
                 System.out.println("Exception Occurred: " +NPE.getMessage());
             }
         }
+    }
+
+    public static void ExcelSheetWriting() throws IOException {
+        FileOutputStream file = new FileOutputStream("F:/Testing/Test.xlsx");
+        XSSFWorkbook workbook = new XSSFWorkbook();
+        XSSFSheet sheet = workbook.createSheet("Sheet 1");
+
+        for(int i = 0; i <= 5; i++){
+            XSSFRow row = sheet.createRow(i);
+
+            for(int j = 0; j < 3; j++){
+                row.createCell(j).setCellValue("xyz");
+            }
+        }
+        workbook.write(file);
+        file.close();
+
+        System.out.println("File Created");
     }
 }
