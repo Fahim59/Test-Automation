@@ -19,12 +19,12 @@ public class AllActions extends BaseClass {
         //DragandDrop();
         //DropDown();
         //RadioButton();
-        Checkbox();
+        //Checkbox();
         //IFrame();
         //Slider();
         //EncodeDecode();
         //FileUpload();
-        //DateTime();
+        DateTime();
 
         SmallWait();
         FirefoxQuit();
@@ -181,13 +181,37 @@ public class AllActions extends BaseClass {
         driver.navigate().to("https://trytestingthis.netlify.app/");
 
         List<WebElement> cbox = driver.findElements(By.xpath("//input[@type='checkbox']"));
-        System.out.println(cbox.size());
+        int size = cbox.size();
+        System.out.println(size);
+        //---------------------------------------------------------------------------//
+        //Select specific checkbox
+
+        /*for(WebElement option : cbox){
+
+            String y = option.getAttribute("value");
+
+            if(y.equalsIgnoreCase("Option 1")){
+                option.click();
+            }
+            System.out.println(option.isSelected());
+        }*/
+        //--------------------------------------------------------//
+        //Select all the checkboxes
+
+        /*for(int i = 0; i < size; i++) {
+            cbox.get(i).click();
+        }*/
+        //--------------------------------------------------------//
+        //Select multiple checkboxes
 
         for(WebElement option : cbox){
 
             String y = option.getAttribute("value");
 
             if(y.equalsIgnoreCase("Option 1")){
+                option.click();
+            }
+            if(y.equalsIgnoreCase("Option 2")){
                 option.click();
             }
             System.out.println(option.isSelected());
@@ -270,25 +294,89 @@ public class AllActions extends BaseClass {
     }
 
     public static void DateTime() throws InterruptedException {
-        String month = "March 2022";
 
-        driver.navigate().to("https://www.shohoz.com/bus-tickets");
+        driver.navigate().to("https://nxtgenaiacademy.com/demo-site/");
 
-        driver.findElement(By.xpath("//*[@id=\"doj\"]")).click();
+        /*driver.findElement(By.id("vfb-18")).click();
 
-        while(true){
-            String text = driver.findElement(By.className("ui-datepicker-title")).getText();
-            //System.out.println(text);
-            if(text.equals(month)){
-                break;
-            }
-            else {
-                driver.findElement(By.cssSelector(".ui-icon-circle-triangle-e")).click();
+        String text = "March 2023";
+        String[] result = text.split(" ");
+        String month = result[0];
+        String year = result[1];
+        //~~~~~~~~~~~~~~~~~~~~~~//
+
+        String title = driver.findElement(By.className("ui-datepicker-title")).getText();
+
+        String[] result1 = title.split(" ");
+        String year1 = result1[1];
+
+        int year2 = Integer.parseInt(year);
+        int year3 = Integer.parseInt(year1);
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+        if(year2 > year3){
+
+            if(title != text){
+
+                while(true){
+                    String yeartext = driver.findElement(By.className("ui-datepicker-year")).getText();
+
+                    if(yeartext.equals(year)){
+                        break;
+                    }
+                    else {
+                        driver.findElement(By.cssSelector(".ui-icon-circle-triangle-e")).click();
+                    }
+                }
+                while(true){
+                    String monthtext = driver.findElement(By.className("ui-datepicker-month")).getText();
+
+                    if(monthtext.equals(month)){
+                        break;
+                    }
+                    else {
+                        driver.findElement(By.cssSelector(".ui-icon-circle-triangle-e")).click();
+                    }
+                }
             }
         }
+        else if(year2 == year3){ //It will not find previous months from the given one.
 
-        driver.findElement(By.xpath("//a[normalize-space()='20']")).click();
+            while(true){
+                String monthtext = driver.findElement(By.className("ui-datepicker-month")).getText();
 
-        Thread.sleep(5000);
+                if(monthtext.equals(month)){
+                    break;
+                }
+                else{
+                    driver.findElement(By.cssSelector(".ui-icon-circle-triangle-e")).click();
+                }
+            }
+        }
+        else{
+            while(true){
+                String yeartext = driver.findElement(By.className("ui-datepicker-year")).getText();
+
+                if(yeartext.equals(year)){
+                    break;
+                }
+                else {
+                    driver.findElement(By.cssSelector(".ui-icon-circle-triangle-w")).click();
+                }
+            }
+            while(true){
+                String monthtext = driver.findElement(By.className("ui-datepicker-month")).getText();
+
+                if(monthtext.equals(month)){
+                    break;
+                }
+                else {
+                    driver.findElement(By.cssSelector(".ui-icon-circle-triangle-w")).click();
+                }
+            }
+        }
+        driver.findElement(By.xpath("//a[normalize-space()='1']")).click();*/
+        //---------------------------------------------------------------------------------//
+        driver.findElement(By.id("vfb-18")).sendKeys("03/01/2023" +Keys.ENTER);
     }
 }

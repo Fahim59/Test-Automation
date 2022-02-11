@@ -12,6 +12,7 @@ public class BaseClass {
     public static void main(String[] args) throws InterruptedException, IOException {}
 
     public static void FirefoxLaunch(){WebDriverManager.firefoxdriver().setup();driver = new FirefoxDriver();}
+    //public static void FirefoxLaunch(){System.setProperty("webdriver.gecko.driver","./src/main/resources/geckodriver.exe");}
 
     public static void FirefoxClose(){driver.close();}
 
