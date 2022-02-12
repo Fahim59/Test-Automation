@@ -55,6 +55,6 @@ public class WebTable extends BaseClass{
                 count = count+ 1;
             }
         }
-        //System.out.println("Number of enabled employees: " +count);
+        System.out.println("Number of enabled employees: " +count);
     }
 }
