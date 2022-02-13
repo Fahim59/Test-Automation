@@ -18,7 +18,7 @@ public class WebTable extends BaseClass{
 
     public static void Table(){
         //driver.navigate().to("http://www.dhs.state.il.us/accessibility/tests/simple-table-test.html");
-        driver.get("file:///C:/Users/Mustafizur%20Rahman/Desktop/Table.html");
+        driver.get("file:///F:/JAVA/ALL CODES/Code/IntelliJ/Table.html");
 
         int tr = driver.findElements(By.xpath("/html/body/main/table/tbody/tr")).size();
         System.out.println(tr);
