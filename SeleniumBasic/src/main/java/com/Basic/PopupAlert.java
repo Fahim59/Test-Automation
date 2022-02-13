@@ -8,7 +8,8 @@ public class PopupAlert extends BaseClass {
         FirefoxLaunch();
         OpenWebsite("https://the-internet.herokuapp.com/javascript_alerts");
 
-        Alert();
+        //Alert();
+        BasicAuthentication();
 
         SmallWait();
         FirefoxQuit();
@@ -58,6 +59,18 @@ public class PopupAlert extends BaseClass {
         }
         else{
             System.out.println("Alert not Clicked");
+        }
+    }
+
+    public static void BasicAuthentication(){
+        //Formula: protocols://username:password@url
+        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+
+        if(driver.getPageSource().contains("Congratulations! You must have the proper credentials.")){
+            System.out.println("Authentication Succeed");
+        }
+        else{
+            System.out.println("Authentication Failed");
         }
     }
 }

@@ -17,14 +17,14 @@ public class AllActions extends BaseClass {
         //KeyboardActions();
         //MouseActions();
         //DragandDrop();
-        //DropDown();
+        DropDown();
         //RadioButton();
         //Checkbox();
         //IFrame();
         //Slider();
         //EncodeDecode();
         //FileUpload();
-        DateTime();
+        //DateTime();
 
         SmallWait();
         FirefoxQuit();
@@ -133,13 +133,13 @@ public class AllActions extends BaseClass {
         Select select = new Select(drop);
         //-----------------------------------------------------------------------//
         //First Method
-        select.selectByIndex(1);
+        /*select.selectByIndex(1);
         select.selectByValue("option 2");
         select.selectByVisibleText("Option 3");
-        Thread.sleep(5000);
+        Thread.sleep(5000);*/
         //-----------------------------------------------------------------------//
         //Second Method
-        List<WebElement> options = select.getOptions();
+        /*List<WebElement> options = select.getOptions();
 
         for(WebElement option : options){
             System.out.println(option.getText());
@@ -151,8 +151,35 @@ public class AllActions extends BaseClass {
                 System.out.println("Not found");
             }
         }
-        Thread.sleep(5000);
+        Thread.sleep(5000);*/
+        //-----------------------------------------------------------------------//
+        //Check if the Dropdown is sorted or not
+        /*List originalList = new ArrayList();
+        List sortedList = new ArrayList();
 
+        List<WebElement> options = select.getOptions();
+
+        for(WebElement option : options){
+            originalList.add(option.getText());
+            sortedList.add(option.getText());
+        }
+        System.out.println("Before sorting, Original List: " +originalList);
+        System.out.println("Before sorting, Sorted List: " +sortedList);
+
+        Collections.sort(sortedList);
+
+        System.out.println("After sorting, Original List: " +originalList);
+        System.out.println("After sorting, Sorted List: " +sortedList);
+
+        if(originalList == sortedList){
+            System.out.println("Sorted");
+        }
+        else {
+            System.out.println("Not Sorted");
+        }
+
+        Thread.sleep(5000);*/
+        //-----------------------------------------------------------------------//
         /*select.deselectByIndex(1);
         select.deselectByValue("option 2");
         select.deselectByVisibleText("Option 3");
