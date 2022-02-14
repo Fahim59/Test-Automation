@@ -26,8 +26,6 @@ public class AllActions extends BaseClass {
         //IFrame();
         //Slider();
         //EncodeDecode();
-        //FileUpload();
-        FileDownload();
         //DateTime();
         //BrokenLink();
 
@@ -313,16 +311,6 @@ public class AllActions extends BaseClass {
         driver.findElement(By.id("login1")).sendKeys("seleniumt@rediffmail.com");
         driver.findElement(By.id("password")).sendKeys(Password());
         driver.findElement(By.name("proceed")).click();
-    }
-
-    public static void FileUpload() throws IOException, InterruptedException {
-        driver.navigate().to("https://www.file.io/");
-
-        driver.findElement(By.xpath("/html/body/div/div/div[1]/div[2]/header/div/div[2]/div[1]/div[2]/label")).click();
-
-        Runtime.getRuntime().exec("F:\\JAVA\\ALL CODES\\Code\\IntelliJ\\Script.exe");
-
-        Thread.sleep(5000);
     }
 
     public static void DateTime() throws InterruptedException {

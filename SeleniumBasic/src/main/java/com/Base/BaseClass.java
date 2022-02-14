@@ -1,5 +1,6 @@
 package com.Base;
 
+import com.google.zxing.NotFoundException;
 import io.github.bonigarcia.wdm.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.*;
@@ -9,7 +10,7 @@ import java.io.*;
 public class BaseClass {
     public static WebDriver driver;
 
-    public static void main(String[] args) throws InterruptedException, IOException {}
+    public static void main(String[] args) throws InterruptedException, IOException, NotFoundException {}
 
     public static void FirefoxLaunch(){WebDriverManager.firefoxdriver().setup();driver = new FirefoxDriver();}
     //public static void FirefoxLaunch(){System.setProperty("webdriver.gecko.driver","./src/main/resources/geckodriver.exe");}
