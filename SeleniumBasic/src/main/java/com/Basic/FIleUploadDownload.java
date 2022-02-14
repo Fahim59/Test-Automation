@@ -7,7 +7,7 @@ import java.io.*;
 
 public class FIleUploadDownload {
     public static void main(String[] args) throws InterruptedException, IOException {
-        //FileUpload();
+        FileUpload();
         //FileDownload();
     }
     public static void FileUpload() throws InterruptedException, IOException {
