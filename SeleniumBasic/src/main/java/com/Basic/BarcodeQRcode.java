@@ -18,7 +18,7 @@ public class BarcodeQRcode extends BaseClass {
         OpenWebsite("http://testautomationpractice.blogspot.com/");
 
         //BarCode();
-        //QRCode();
+        QRCode();
 
         SmallWait();
         FirefoxQuit();
