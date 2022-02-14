@@ -27,7 +27,7 @@ public class AllActions extends BaseClass {
         //Slider();
         //EncodeDecode();
         //DateTime();
-        //BrokenLink();
+        BrokenLink();
 
         SmallWait();
         FirefoxQuit();
