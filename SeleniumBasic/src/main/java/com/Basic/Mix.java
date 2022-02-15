@@ -2,6 +2,7 @@ package com.Basic;
 
 import com.Base.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.*;
 
 import java.io.*;
 import java.net.*;
@@ -11,9 +12,10 @@ import java.util.*;
 public class Mix extends BaseClass {
     public static void main(String[] args) throws InterruptedException, IOException {
         FirefoxLaunch();
-        OpenWebsite("");
 
         //BrokenLink();
+        //BrokenImage();
+        //ContextMenu();
 
         SmallWait();
         FirefoxQuit();
@@ -53,5 +55,45 @@ public class Mix extends BaseClass {
                 System.out.println(url +" - "+ " is not broken");
             }
         }
+    }
+
+    public static void BrokenImage(){
+        driver.navigate().to("https://the-internet.herokuapp.com/broken_images");
+        //---------------------------------------------------------------------------//
+        //Single Image
+        WebElement image = driver.findElement(By.xpath("/html/body/div[2]/div/div/img[1]"));
+
+        if (image.getAttribute("naturalWidth").equals("0")) {
+            System.out.println(image.getAttribute("outerHTML") + " is broken.");
+        }
+        else{
+            System.out.println(image.getAttribute("outerHTML") + " is not broken.");
+        }
+        //------------------------------------------------------------------------------------//
+        //Multiple Images
+        /*List <WebElement>  images = driver.findElements(By.tagName("img"));
+        System.out.println(images.size());
+
+        for(WebElement img :images){
+            if (img.getAttribute("naturalWidth").equals("0")) {
+                System.out.println(img.getAttribute("outerHTML") + " is broken.");
+            }
+            else{
+                System.out.println(img.getAttribute("outerHTML") + " is not broken.");
+            }
+        }*/
+    }
+
+    public static void ContextMenu(){
+        driver.navigate().to("https://the-internet.herokuapp.com/context_menu");
+
+        Actions actions = new Actions(driver);
+
+        WebElement rightClickBtn  = driver.findElement(By.id("hot-spot"));
+        actions.contextClick(rightClickBtn).perform();
+
+        Alert alert = driver.switchTo().alert();
+        System.out.println(alert.getText());
+        alert.accept();
     }
 }
