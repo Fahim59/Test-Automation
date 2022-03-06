@@ -304,7 +304,7 @@ public class AllActions extends BaseClass {
     }
 
     public static void EncodeDecode(){
-        driver.navigate().to("https://www.rediff.com/");
+        driver.navigate().to("");
 
         driver.findElement(By.linkText("Sign in")).click();
         driver.findElement(By.id("login1")).sendKeys("seleniumt@rediffmail.com");

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="F:/JAVA/ALL CODES/Code/IntelliJ/SeleniumBasic/src/test/java/com/TestNG">
+        <classes>
+            <class name="com.TestNG.LoginTest">
+            <methods>
+                <include name="Login"/>
+                <include name="Logout"/>
+                <include name="Test3"/>
+                <include name="Test4"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
