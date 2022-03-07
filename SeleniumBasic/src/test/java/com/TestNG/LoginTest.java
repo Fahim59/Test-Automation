@@ -53,4 +53,5 @@ public class LoginTest extends BaseClass {
     public static void QuitBrowser(){
         FirefoxQuit();
     }
+    //------------------------------------------------------------------------------------//
 }
