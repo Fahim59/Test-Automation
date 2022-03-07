@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- It is for run parallel methods in a same class
+
+<suite name="All Test Suite" parallel="methods" thread-count="2">
+    <test verbose="2" preserve-order="true" name="F:/JAVA/ALL CODES/Code/IntelliJ/SeleniumBasic/src/test/java/com/TestNG/ParallelTest.java">
+        <classes>
+            <class name="com.TestNG.ParallelTest1"/>
+        </classes>
+    </test>
+</suite>
+
+-->
+        <!-- ////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- It is for run parallel classes in different class-->
+
+<suite name="All Test Suite" parallel="classes" thread-count="3">
+    <test verbose="2" preserve-order="true" name="test">
+        <classes>
+            <class name="com.TestNG.ParallelTest1"/>
+            <class name="com.TestNG.ParallelTest2"/>
+        </classes>
+    </test>
+</suite>

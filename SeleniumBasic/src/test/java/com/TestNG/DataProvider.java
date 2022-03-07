@@ -6,7 +6,7 @@ import org.testng.annotations.*;
 
 public class DataProvider extends BaseClass {
 
-    @BeforeClass //Executes only once before all test methods
+    @BeforeClass
     public static void LaunchBrowser(){
         FirefoxLaunch();
         OpenWebsite("https://the-internet.herokuapp.com/login");
