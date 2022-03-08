@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="F:/JAVA/ALL CODES/Code/IntelliJ/SeleniumBasic/src/test/java/com/TestNG">
         <classes>
-            <class name="com.TestNG.Assertion">
+            <class name="com.TestNG.Assertion.Assertion">
                 <methods>
                     <include name="Logo"/>
                     <include name="Title"/>
