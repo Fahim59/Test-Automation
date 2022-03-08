@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="com.TestNG.Listeners"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="F:/JAVA/ALL CODES/Code/IntelliJ/SeleniumBasic/src/test/java/com/TestNG/Listeners.java">
+        <classes>
+                <class name="com.TestNG.Listeners1"/>
+        </classes>
+    </test>
+</suite>
