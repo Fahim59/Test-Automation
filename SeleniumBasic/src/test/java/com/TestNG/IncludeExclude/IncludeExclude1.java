@@ -1,4 +1,4 @@
-package com.TestNG;
+package com.TestNG.IncludeExclude;
 
 import org.testng.annotations.*;
 

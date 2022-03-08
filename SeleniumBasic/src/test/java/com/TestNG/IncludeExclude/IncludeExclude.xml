@@ -3,13 +3,13 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="F:/JAVA/ALL CODES/Code/IntelliJ/SeleniumBasic/src/test/java/com/TestNG/IncludeExclude.java">
         <classes>
-            <class name="com.TestNG.IncludeExclude1">
+            <class name="com.TestNG.IncludeExclude.IncludeExclude1">
                 <methods>
                     <exclude name="ForgetPassword_Test_InValid_Scenario"/>
                 </methods>
             </class>
 
-            <class name="com.TestNG.IncludeExclude2">
+            <class name="com.TestNG.IncludeExclude.IncludeExclude2">
                 <methods>
                     <include name="Login_Test_InValid_Scenario.*"/>
                 </methods>
