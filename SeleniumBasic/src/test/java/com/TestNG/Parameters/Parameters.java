@@ -1,4 +1,4 @@
-package com.TestNG;
+package com.TestNG.Parameters;
 
 import io.github.bonigarcia.wdm.*;
 import org.openqa.selenium.*;

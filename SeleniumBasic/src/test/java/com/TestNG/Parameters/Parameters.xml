@@ -7,7 +7,7 @@
 
     <test verbose="2" preserve-order="true" name="F:/JAVA/ALL CODES/Code/IntelliJ/SeleniumBasic/src/test/java/com/TestNG/Parameters.java">
         <classes>
-            <class name="com.TestNG.Parameters">
+            <class name="com.TestNG.Parameters.Parameters">
                 <methods>
                     <include name="Title"/>
                 </methods>
