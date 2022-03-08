@@ -11,13 +11,13 @@ import java.util.*;
 
 public class ReadExcel extends BaseClass{
     public static void main(String[] args) throws IOException, InterruptedException {
-        //FirefoxLaunch();
-        //OpenWebsite("https://nxtgenaiacademy.com/demo-site/");
+        FirefoxLaunch();
+        OpenWebsite("https://nxtgenaiacademy.com/demo-site/");
 
-        //ExcelSheetReading();
-        ExcelSheetWriting();
+        ExcelSheetReading();
+        //ExcelSheetWriting();
 
-        //FirefoxQuit();
+        FirefoxQuit();
     }
 
     public static void ExcelSheetReading() throws IOException, InterruptedException {
