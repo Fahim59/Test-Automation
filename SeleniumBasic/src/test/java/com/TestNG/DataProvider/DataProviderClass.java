@@ -1,4 +1,4 @@
-package com.TestNG;
+package com.TestNG.DataProvider;
 
 public class DataProviderClass {
 

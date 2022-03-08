@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="F:/JAVA/ALL CODES/Code/IntelliJ/SeleniumBasic/src/test/java/com/TestNG/DataProvider.java">
         <classes>
-            <class name="com.TestNG.DataProvider">
+            <class name="com.TestNG.DataProvider.DataProvider">
                 <methods>
                     <include name="Login"/>
                 </methods>
