@@ -19,8 +19,8 @@
 <suite name="All Test Suite" parallel="classes" thread-count="3">
     <test verbose="2" preserve-order="true" name="test">
         <classes>
-            <class name="com.TestNG.ParallelTest1"/>
-            <class name="com.TestNG.ParallelTest2"/>
+            <class name="com.TestNG.ParallelTest.ParallelTest1"/>
+            <class name="com.TestNG.ParallelTest.ParallelTest2"/>
         </classes>
     </test>
 </suite>
