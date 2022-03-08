@@ -11,7 +11,7 @@
         </groups>
 
         <classes>
-            <class name="com.TestNG.Grouping"/>
+            <class name="com.TestNG.Grouping.Grouping"/>
         </classes>
     </test>
 </suite>

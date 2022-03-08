@@ -1,4 +1,4 @@
-package com.TestNG;
+package com.TestNG.Grouping;
 import org.testng.annotations.*;
 
 public class Grouping{
