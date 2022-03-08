@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="F:/JAVA/ALL CODES/Code/IntelliJ/SeleniumBasic/src/test/java/com/TestNG">
         <classes>
-            <class name="com.TestNG.LoginTest">
+            <class name="com.TestNG.Basic.LoginTest">
             <methods>
                 <include name="Login"/>
                 <include name="Logout"/>

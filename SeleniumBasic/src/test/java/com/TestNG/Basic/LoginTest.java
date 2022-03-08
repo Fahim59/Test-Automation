@@ -1,6 +1,6 @@
 //description--priority--enable;disable--dependency--always run
 
-package com.TestNG;
+package com.TestNG.Basic;
 
 import com.Base.*;
 import org.openqa.selenium.*;
