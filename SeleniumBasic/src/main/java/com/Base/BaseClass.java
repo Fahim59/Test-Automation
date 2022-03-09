@@ -2,6 +2,7 @@ package com.Base;
 
 import com.google.zxing.NotFoundException;
 import io.github.bonigarcia.wdm.*;
+import org.apache.commons.io.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.*;
 
@@ -23,4 +24,16 @@ public class BaseClass {
     public static void SmallWait() throws InterruptedException {Thread.sleep(3000);}
 
     public static void OpenWebsite(String Url){driver.get(Url);}
+
+    public static void Screenshot(String methodName) throws IOException {
+
+        File image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        try{
+            //FileUtils.copyFile(image,new File("./Screenshot/image.png"));
+            FileUtils.copyFile(image,new File("./Screenshot/" + methodName + "-" + ".jpg"));
+        }
+        catch(IOException ex){
+            ex.getMessage();
+        }
+    }
 }
