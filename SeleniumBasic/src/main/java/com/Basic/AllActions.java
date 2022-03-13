@@ -215,7 +215,7 @@ public class AllActions extends BaseClass {
         //---------------------------------------------------------------------------//
         //Select specific checkbox
 
-        /*for(WebElement option : cbox){
+        for(WebElement option : cbox){
 
             String y = option.getAttribute("value");
 
@@ -223,7 +223,7 @@ public class AllActions extends BaseClass {
                 option.click();
             }
             System.out.println(option.isSelected());
-        }*/
+        }
         //--------------------------------------------------------//
         //Select all the checkboxes
 
@@ -233,7 +233,7 @@ public class AllActions extends BaseClass {
         //--------------------------------------------------------//
         //Select multiple checkboxes
 
-        for(WebElement option : cbox){
+        /*for(WebElement option : cbox){
 
             String y = option.getAttribute("value");
 
@@ -244,7 +244,7 @@ public class AllActions extends BaseClass {
                 option.click();
             }
             System.out.println(option.isSelected());
-        }
+        }*/
     }
 
     public static void IFrame(){
