@@ -1,0 +1,17 @@
+package com.testRunner;
+
+import io.cucumber.junit.*;
+import org.junit.runner.*;
+
+@CucumberOptions
+        (
+                features = "./Features/NewCustomer.feature",
+                glue = "com.stepDefinition",
+                //dryRun = true,
+                monochrome = true,
+                plugin = {"pretty","html:Reports/NewCustomerReport.html"}
+        )
+
+@RunWith(Cucumber.class)
+public class NewCustomerRun {
+}
