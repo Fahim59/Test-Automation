@@ -1,4 +1,4 @@
-Feature: NewCustomer
+Feature: NewCustomers
 
   Scenario: Adding new Customers
     Given User launch the Firefox browser
