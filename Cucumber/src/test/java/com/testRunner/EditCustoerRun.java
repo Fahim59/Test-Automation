@@ -7,7 +7,7 @@ import org.junit.runner.*;
         (
                 features = "./Features/EditCustomer.feature",
                 glue = "com.stepDefinition.EditCustomerStepDefinition",
-                dryRun = true,
+                //dryRun = true,
                 monochrome = true,
                 plugin = {"pretty","html:Reports/EditCustomerReport.html"}
         )

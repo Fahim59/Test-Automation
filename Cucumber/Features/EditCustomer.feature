@@ -8,8 +8,7 @@ Feature: SearchCustomer
     Then Page title should be "Dashboard / nopCommerce administration"
     When User clicks on Customer menu
     And User clicks on Customer menu item
-    Then User finds Customer
-    And Clicks on Edit button
+    Then User finds Customer and clicks on Edit button
     Then Edit the Customer info
     And Clicks on Save Button
     Then Checks the Edited info of the customer
