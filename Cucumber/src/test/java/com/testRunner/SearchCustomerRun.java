@@ -7,7 +7,7 @@ import org.junit.runner.*;
 @CucumberOptions
         (
                 features = "./Features/SearchCustomer.feature",
-                glue = "com.stepDefinition",
+                glue = "com.stepDefinition.SearchCustomerStepDefinition",
                 //dryRun = true,
                 monochrome = true,
                 plugin = {"pretty","html:Reports/SearchCustomerReport.html"}

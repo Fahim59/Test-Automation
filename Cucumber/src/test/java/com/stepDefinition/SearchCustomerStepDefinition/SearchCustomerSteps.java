@@ -1,4 +1,4 @@
-package com.stepDefinition;
+package com.stepDefinition.SearchCustomerStepDefinition;
 
 import com.Base.*;
 import io.cucumber.java.en.*;
