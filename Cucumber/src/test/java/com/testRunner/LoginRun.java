@@ -6,7 +6,7 @@ import org.junit.runner.*;
 @CucumberOptions
         (
                 features = "./Features/Login.feature",
-                glue = "com.stepDefinition",
+                glue = "com.stepDefinition.LoginStepDefinition",
                 monochrome = true,
                 plugin = {"pretty","html:Reports/LoginReport.html"}
         )
