@@ -16,7 +16,7 @@ public class EditCustomerSteps extends BaseClass {
     public void user_launch_firefox_browser() {
         logger = Logger.getLogger("Cucumber");
         PropertyConfigurator.configure("log4j.properties");
-        //logger.info("----------- Launching Browser -----------");
+        logger.info("----------- Launching Browser -----------");
 
         FirefoxLaunch();
     }
