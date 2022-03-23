@@ -8,7 +8,8 @@ import org.junit.runner.*;
                 features = "./Features/Login.feature",
                 glue = "com.stepDefinition.LoginStepDefinition",
                 monochrome = true,
-                plugin = {"pretty","html:Reports/LoginReport.html"}
+                plugin = {"pretty","html:Reports/LoginReport.html"},
+                tags = "@Normal"
         )
 @RunWith(Cucumber.class)
 public class LoginRun {

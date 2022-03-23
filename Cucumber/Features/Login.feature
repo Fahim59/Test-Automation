@@ -1,5 +1,6 @@
 Feature: Login
 
+  @Normal
   Scenario: Successful login with valid credentials
     Given User launch Firefox browser
     When User opens URL "https://admin-demo.nopcommerce.com/login"
@@ -10,6 +11,7 @@ Feature: Login
     Then Page title becomes "Your store. Login"
     And Close browser
 
+  @DataDriven
   Scenario Outline: Successful login with valid credentials
     Given User launch Firefox browser
     When User opens URL "https://admin-demo.nopcommerce.com/login"
