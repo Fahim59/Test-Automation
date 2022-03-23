@@ -6,10 +6,12 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.*;
 
 import java.io.*;
+import java.util.logging.*;
 
 public class BaseClass {
 
     public static WebDriver driver;
+    public static Logger logger;
 
     public static void FirefoxLaunch(){WebDriverManager.firefoxdriver().setup();driver = new FirefoxDriver();}
 
