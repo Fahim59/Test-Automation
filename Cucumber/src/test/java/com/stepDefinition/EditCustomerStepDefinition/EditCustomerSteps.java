@@ -7,7 +7,6 @@ import org.junit.*;
 import org.openqa.selenium.*;
 
 import java.time.*;
-import java.util.logging.*;
 import java.util.logging.Logger;
 
 public class EditCustomerSteps extends BaseClass {

@@ -10,6 +10,8 @@ import org.junit.runner.*;
                 monochrome = true,
                 plugin = {"pretty","html:Reports/LoginReport.html"},
                 tags = "@Normal"
+                //tags = "@Normal or @DataDriven"
+                //tags = "@Normal and @DataDriven"
         )
 @RunWith(Cucumber.class)
 public class LoginRun {
