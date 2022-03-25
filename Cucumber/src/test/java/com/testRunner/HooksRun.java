@@ -8,7 +8,7 @@ import org.junit.runner.*;
                 features = "./Features/Hooks.feature",
                 glue = "com.stepDefinition.HooksStepDefinition",
                 monochrome = true,
-                plugin = {"pretty","html:Reports/HooksReport.json"}
+                plugin = {"pretty","html:Reports/HooksReport.html"}
         )
 @RunWith(Cucumber.class)
 public class HooksRun {
