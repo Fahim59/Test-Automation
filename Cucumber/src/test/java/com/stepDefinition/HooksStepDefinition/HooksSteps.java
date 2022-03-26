@@ -2,11 +2,21 @@ package com.stepDefinition.HooksStepDefinition;
 
 import io.cucumber.java.*;
 import io.cucumber.java.en.*;
+import io.cucumber.junit.*;
+import org.apache.logging.log4j.*;
 
-public class HooksSteps {
+public class HooksSteps{
+    public static Logger logger = LogManager.getLogger(Cucumber .class);
 
     @Before(order = 1)
     public void Setup1(){
+        logger.trace("This is a Trace");
+        logger.debug("This is a Debug");
+        logger.info("This is an Info");
+        logger.warn("This is a Warn");
+        logger.error("This is an Error");
+        logger.fatal("This is a Fatal");
+
         System.out.println("I am setup 1");
     }
 
