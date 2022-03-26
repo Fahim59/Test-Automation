@@ -2,12 +2,10 @@ package com.stepDefinition.EditCustomerStepDefinition;
 
 import com.Base.*;
 import io.cucumber.java.en.*;
-import org.apache.log4j.*;
 import org.junit.*;
 import org.openqa.selenium.*;
 
 import java.time.*;
-import java.util.logging.Logger;
 
 public class EditCustomerSteps extends BaseClass {
 

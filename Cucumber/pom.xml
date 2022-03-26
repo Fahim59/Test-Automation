@@ -128,14 +128,14 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports-cucumber4-adapter</artifactId>
-            <version>1.2.1</version>
+            <version>1.0.12</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/log4j -->
+        <!-- https://mvnrepository.com/artifact/de.monochromata.cucumber/reporting-plugin -->
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+            <groupId>de.monochromata.cucumber</groupId>
+            <artifactId>reporting-plugin</artifactId>
+            <version>5.0.0</version>
         </dependency>
 
     </dependencies>
